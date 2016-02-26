@@ -13,9 +13,11 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userLogoutNotification, object: nil)
         
         // Initialize Parse
         // Set applicationId and server based on the values in the Heroku settings.
@@ -23,12 +25,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initializeWithConfiguration(
             ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "instagram-for-ios490"
+                configuration.clientKey = "i3D-3cA-9OE-2c7-1Qd"
                 configuration.server = "https://instagram-ios.herokuapp.com/parse"
-                configuration.clientKey = ""
             })
         )
         
+        if PFUser.currentUser() != nil {
+            let vc = storyboard.instantiateViewControllerWithIdentifier("HomeTabBarController")
+            window?.rootViewController = vc
+        }
+        
         return true
+    }
+    
+    func userDidLogout() {
+        let vc = storyboard.instantiateViewControllerWithIdentifier("LoginViewController")
+        window?.rootViewController = vc
     }
 
     func applicationWillResignActive(application: UIApplication) {
