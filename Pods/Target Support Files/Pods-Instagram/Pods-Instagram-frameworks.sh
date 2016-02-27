@@ -84,10 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Instagram/BFRadialWaveHUD.framework"
+  install_framework "Pods-Instagram/BFRadialWaveView.framework"
   install_framework "Pods-Instagram/Bolts.framework"
   install_framework "Pods-Instagram/Parse.framework"
+  install_framework "Pods-Instagram/UIColor_BFPaperColors.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Instagram/BFRadialWaveHUD.framework"
+  install_framework "Pods-Instagram/BFRadialWaveView.framework"
   install_framework "Pods-Instagram/Bolts.framework"
   install_framework "Pods-Instagram/Parse.framework"
+  install_framework "Pods-Instagram/UIColor_BFPaperColors.framework"
 fi

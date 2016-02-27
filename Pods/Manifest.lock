@@ -1,13 +1,23 @@
 PODS:
+  - BFRadialWaveHUD (1.5.4):
+    - BFRadialWaveView (~> 1.4.6)
+    - UIColor+BFPaperColors
+  - BFRadialWaveView (1.4.6):
+    - UIColor+BFPaperColors
   - Bolts/Tasks (1.6.0)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
+  - UIColor+BFPaperColors (1.7.2)
 
 DEPENDENCIES:
+  - BFRadialWaveHUD
   - Parse
 
 SPEC CHECKSUMS:
+  BFRadialWaveHUD: 11a42d0c73a96f055ca3b82ec69817b8d2554849
+  BFRadialWaveView: dcf3f2b07b3993e6e748fd3489e490d94c1052a8
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  UIColor+BFPaperColors: 03101fe6c10ed00c6daae7c26553f1de41500853
 
 COCOAPODS: 0.39.0

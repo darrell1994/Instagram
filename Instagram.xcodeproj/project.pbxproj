@@ -10,6 +10,7 @@
 		5B399E541C7FFA3F00370724 /* add_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B399E531C7FFA3F00370724 /* add_image.png */; };
 		5B399E571C80021200370724 /* InstagramPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B399E561C80021200370724 /* InstagramPost.swift */; };
 		5B399E5B1C800A3E00370724 /* InstagramCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B399E5A1C800A3E00370724 /* InstagramCell.swift */; };
+		5BBBDD8B1C82036600F453EF /* iconmonstr-user-1-240.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BBBDD8A1C82036600F453EF /* iconmonstr-user-1-240.png */; };
 		5BF443AD1C7BDBD5008FA7B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF443AC1C7BDBD5008FA7B6 /* AppDelegate.swift */; };
 		5BF443B21C7BDBD5008FA7B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF443B01C7BDBD5008FA7B6 /* Main.storyboard */; };
 		5BF443B41C7BDBD5008FA7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF443B31C7BDBD5008FA7B6 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		5B399E531C7FFA3F00370724 /* add_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_image.png; sourceTree = "<group>"; };
 		5B399E561C80021200370724 /* InstagramPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramPost.swift; sourceTree = "<group>"; };
 		5B399E5A1C800A3E00370724 /* InstagramCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramCell.swift; sourceTree = "<group>"; };
+		5BBBDD8A1C82036600F453EF /* iconmonstr-user-1-240.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconmonstr-user-1-240.png"; sourceTree = "<group>"; };
 		5BF443A91C7BDBD5008FA7B6 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF443AC1C7BDBD5008FA7B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF443B11C7BDBD5008FA7B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				5B399E551C80020000370724 /* Models */,
 				5BF443AC1C7BDBD5008FA7B6 /* AppDelegate.swift */,
 				5BF443B01C7BDBD5008FA7B6 /* Main.storyboard */,
+				5BBBDD8A1C82036600F453EF /* iconmonstr-user-1-240.png */,
 				5B399E531C7FFA3F00370724 /* add_image.png */,
 				5B399E5A1C800A3E00370724 /* InstagramCell.swift */,
 				5BF443B31C7BDBD5008FA7B6 /* Assets.xcassets */,
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBBDD8B1C82036600F453EF /* iconmonstr-user-1-240.png in Resources */,
 				5BF443B71C7BDBD5008FA7B6 /* LaunchScreen.storyboard in Resources */,
 				5BF443B41C7BDBD5008FA7B6 /* Assets.xcassets in Resources */,
 				5BF443B21C7BDBD5008FA7B6 /* Main.storyboard in Resources */,

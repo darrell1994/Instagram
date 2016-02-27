@@ -121,8 +121,8 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fcy-zD-NP6">
                                                     <rect key="frame" x="8" y="296" width="0.0" height="0.0"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -233,16 +233,45 @@
                                     <action selector="onLogout:" destination="eJj-7a-seC" eventType="touchUpInside" id="V0f-7D-otL"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconmonstr-user-1-240.png" translatesAutoresizingMaskIntoConstraints="NO" id="m0V-DC-n07">
+                                <rect key="frame" x="96" y="92" width="128" height="128"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="FVH-GC-9sD"/>
+                                    <constraint firstAttribute="height" constant="128" id="wvo-pa-fKc"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="rUZ-3Z-WRe" appends="YES" id="hN3-ta-ZNQ"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr5-NG-oNs">
+                                <rect key="frame" x="135" y="59" width="49" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IAy-ox-2HK" firstAttribute="centerX" secondItem="kTq-xo-IRQ" secondAttribute="centerX" id="5VV-Hw-0jZ"/>
+                            <constraint firstItem="Lr5-NG-oNs" firstAttribute="top" secondItem="q3F-4K-kL5" secondAttribute="bottom" constant="39" id="8be-S7-h1S"/>
                             <constraint firstItem="IAy-ox-2HK" firstAttribute="centerY" secondItem="kTq-xo-IRQ" secondAttribute="centerY" id="EX5-rU-BcF"/>
+                            <constraint firstItem="m0V-DC-n07" firstAttribute="top" secondItem="Lr5-NG-oNs" secondAttribute="bottom" constant="13" id="bZa-fN-Ahf"/>
+                            <constraint firstItem="Lr5-NG-oNs" firstAttribute="centerX" secondItem="kTq-xo-IRQ" secondAttribute="centerX" id="q5H-up-pie"/>
+                            <constraint firstItem="m0V-DC-n07" firstAttribute="centerX" secondItem="kTq-xo-IRQ" secondAttribute="centerX" id="wfH-o7-bd1"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile" id="bWR-4v-RWN"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="m0V-DC-n07" id="VXj-ol-dsn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XFW-0V-NqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rUZ-3Z-WRe">
+                    <connections>
+                        <action selector="onAddProfile:" destination="eJj-7a-seC" id="ZOD-A0-37T"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="526" y="958"/>
         </scene>
@@ -308,6 +337,7 @@
         <image name="add_image.png" width="300" height="300"/>
         <image name="capture" width="29" height="29"/>
         <image name="home" width="29" height="29"/>
+        <image name="iconmonstr-user-1-240.png" width="240" height="240"/>
         <image name="profile" width="29" height="29"/>
     </resources>
 </document>

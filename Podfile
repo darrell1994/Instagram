@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'Instagram' do
 pod 'Parse'
+pod 'BFRadialWaveHUD'
 end
 

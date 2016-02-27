@@ -8,15 +8,19 @@
 
 import UIKit
 import Parse
+import BFRadialWaveHUD
 
 class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var captionTextField: UITextView!
+    var loadingHUD: BFRadialWaveHUD?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         captionTextField.delegate = self
+        
+        loadingHUD = BFRadialWaveHUD(view: view, fullScreen: true, circles: 20, circleColor: UIColor.whiteColor(), mode: BFRadialWaveHUDMode.Default, strokeWidth: 1)
         
         let recogonizer = UITapGestureRecognizer(target: self, action: "onAddImage")
         photoView.addGestureRecognizer(recogonizer)
@@ -45,8 +49,10 @@ class CaptureViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func onUpload(sender: AnyObject) {
+        loadingHUD?.show()
         let post = InstagramPost(image: photoView.image, caption: captionTextField.text)
         post.postImageWithCompletion { (success, error) -> Void in
+            self.loadingHUD?.dismiss()
             if success {
                 let popup = UIAlertController(title: "Image uploaded!", message: nil, preferredStyle: .Alert)
                 popup.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
